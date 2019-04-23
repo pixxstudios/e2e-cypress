@@ -1,5 +1,5 @@
-describe("My first test", () => {
-    it("pass first test", () => {
-        expect(true).to.equal(true);
+describe("Testing the home page for automationpractice", () => {
+    it("Visits the automationpractice", () => {
+        cy.visit("http://automationpractice.com/index.php");
     })
 });
