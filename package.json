@@ -1,0 +1,15 @@
+{
+  "name": "e2e-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pixxstudios/e2e-cypress.git",
+  "author": "Gagandeep Singh <gagan.ddun@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "e2e": "./node_modules/.bin/cypress open",
+    "e2e:headless": "./node_modules/.bin/cypress run"
+  },
+  "dependencies": {
+    "cypress": "^3.2.0"
+  }
+}
