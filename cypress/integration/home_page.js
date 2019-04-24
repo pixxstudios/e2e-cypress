@@ -15,20 +15,30 @@ describe("Testing the home page for automationpractice", () => {
 describe("Test the search functionality", () => {
     it('Should perform search operation', () => {
         cy.get('input.search_query')
-        .type('clothes')
+        .type('shirt')
 
         cy.get('button.button-search')
         .click();
 
         cy.url()
-        .should('include', 'earch_query=clothes')
+        .should('include', 'earch_query=shirt')
+
+        cy.get('a.product-name')
+        .should('contain', 'Faded Short Sleeve T-shirts')
     })
 });
 
-describe("Test the Sign in / Sign up page", () => {
+describe("Buy item", () => {
+    it("Should add item to cart after search", () => {
+    cy.contains('Add to cart')
+    .click()
+    })
+});
+
+/* describe("Test the Sign in / Sign up page", () => {
     it('Should click on sign in link and open the new page', () => {
         it("Open the sign in page", () => {
             cy.contains('Sign in').click()
         })
     })
-})
+}) */
