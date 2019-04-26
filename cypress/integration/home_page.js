@@ -75,17 +75,4 @@ describe("Buy item", () => {
         cy.contains('Add to cart')
         .click()
     })
-
-    /* it("open cart", () => {
-        cy.get('div.shopping_cart > a')
-        .click()
-    }) */
 });
-
-/* describe("Test the Sign in / Sign up page", () => {
-    it('Should click on sign in link and open the new page', () => {
-        it("Open the sign in page", () => {
-            cy.contains('Sign in').click()
-        })
-    })
-}) */
