@@ -45,7 +45,7 @@ describe("Testing the home page for automationpractice", () => {
         cy.get('@listItem').within(() => {
             cy.get('a')
             .should('have.attr', 'href', 'http://www.prestashop.com/?utm_source=v16_homeslider')
-            
+
             cy.contains('div.homeslider-description h2', 'EXCEPTEUR');
 
             cy.contains('div.homeslider-description p:first',
@@ -60,4 +60,9 @@ describe("Testing the home page for automationpractice", () => {
         .should('have.attr', 'href', 'http://automationpractice.com/')
         .and('have.attr', 'title', 'My Store')
     });
+
+    it("Should have 4 social media icons", () => {
+        cy.get('section#social_block ul>li')
+        .should('have.length', '4');
+    })
 });
