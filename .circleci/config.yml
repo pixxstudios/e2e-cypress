@@ -10,6 +10,5 @@ jobs:
 
     steps:
       - checkout
-      - run: npm install
-      - run: npm install cypress 
+      - run: npm install 
       - run: cypress run
