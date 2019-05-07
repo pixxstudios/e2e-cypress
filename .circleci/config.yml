@@ -1,0 +1,7 @@
+version: 2
+jobs:
+  build:
+    steps:
+      - checkout # check out the code in the project directory
+      - run: node install
+      - run: npm run e2e:headless
