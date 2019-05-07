@@ -11,4 +11,4 @@ jobs:
     steps:
       - checkout
       - run: npm install 
-      - run: cypress run
+      - run: npm run e2e:headless
