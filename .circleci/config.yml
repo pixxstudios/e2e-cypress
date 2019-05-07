@@ -12,4 +12,4 @@ jobs:
       - checkout
       - run: npm install
       - run: npm install cypress 
-      - run: npm run e2e:headless
+      - run: cypess run
