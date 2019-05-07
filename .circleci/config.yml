@@ -1,9 +1,10 @@
-version: 2
+version: 1.0.0
 jobs:
   build:
     docker:
       -image: circleci/node:11.4.0
+
     steps:
-      - checkout # check out the code in the project directory
+      - checkout
       - run: node install
-      - run: npm run e2e:headless
+      - run: npm e2e:headless
