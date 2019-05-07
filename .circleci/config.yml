@@ -4,13 +4,6 @@ orbs:
   cypress: cypress-io/cypress@1.5.1
 
 jobs:
-  release:
-    executor: cypress/base-10
-    steps:
-      - attach_workspace:
-          at: ~/
-      - run: npm run semantic-release
-      
   build:
     docker:
       - image: circleci/node:11.4.0
@@ -18,4 +11,5 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: npm install cypress 
       - run: npm run e2e:headless
